@@ -14,6 +14,7 @@ const viewsFolder = path.join(__dirname,"../templates/views")
 const partialsFolder = path.join(__dirname,"../templates/partials")
 
 const app = express()
+const port = process.env.PORT || 3000
 
 app.set('view engine','hbs')
 app.set('views',viewsFolder)
@@ -90,8 +91,6 @@ app.get('*', (req,res) => {
 })
 
 
-
-const port = 3000
 app.listen(port, () => {
     console.log('Server up in port: ',port)
 })
