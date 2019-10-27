@@ -12,7 +12,7 @@ const forecast = (latitude,longitude,callback) => {
         } else {
             const temperature = body.currently.temperature
             const precipProbability = body.currently.precipProbability
-            callback(undefined, body.daily.data[0].summary+" Temperatura ara: "+temperature+". % de probabilitat de pluja: "+precipProbability)
+            callback(undefined, body.daily.data[0].summary+" Temperatura ara: "+temperature+". Temperatura maxima d'avui: " + body.daily.data[0].temperatureHigh+" i la minima: "+ body.daily.data[0].temperatureLow+"% de probabilitat de pluja: "+precipProbability)
         }
     })
 
